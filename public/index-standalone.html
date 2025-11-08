@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media Downloader API • Explorer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { color-scheme: dark; }
+    body { background-color: #0F172A; }
+    .glass { backdrop-filter: blur(12px); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); }
+  </style>
+</head>
+<body class="min-h-screen bg-[#0F172A] text-slate-200">
+  <header class="sticky top-0 z-40 backdrop-blur bg-slate-900/70 border-b border-slate-700/40">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 grid place-items-center shadow-lg shadow-blue-500/30">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5 text-white"><path d="M4.5 19.5l6-6m0 0L9 9m1.5 4.5L15 15m-3-1.5l6-6"/></svg>
+        </div>
+        <div>
+          <p class="text-white font-semibold leading-tight">Media Downloader API</p>
+          <p class="text-xs text-slate-300/70">by Debraj</p>
+        </div>
+      </div>
+      <a href="/logs.html" class="px-3 py-2 rounded-lg text-sm bg-blue-600 hover:bg-blue-500 text-white shadow shadow-blue-500/30">Live Logs</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-blue-500/20 blur-3xl"></div>
+        <div class="absolute -bottom-20 -left-20 h-96 w-96 rounded-full bg-emerald-500/10 blur-3xl"></div>
+      </div>
+      <div class="max-w-6xl mx-auto px-4 py-16 md:py-24">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white">Lightning-fast Media Downloader API</h1>
+            <p class="mt-4 text-lg text-slate-300">Test Debraj's endpoints with a clean, modern interface. Glass cards, blue gradients, smooth animations, fully responsive.</p>
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+              <a href="#endpoints" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition-colors shadow shadow-blue-500/30">Explore API
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="/logs.html" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-100 px-4 py-2 rounded-lg transition-colors">View Live Logs</a>
+            </div>
+            <dl class="mt-10 grid grid-cols-3 gap-4 text-slate-300">
+              <div class="glass p-4 rounded-xl"><div class="text-2xl font-bold text-white">99.9%</div><div class="text-xs">Uptime</div></div>
+              <div class="glass p-4 rounded-xl"><div class="text-2xl font-bold text-white"><span class="text-emerald-400">~</span>120ms</div><div class="text-xs">Avg latency</div></div>
+              <div class="glass p-4 rounded-xl"><div class="text-2xl font-bold text-white">24/7</div><div class="text-xs">Monitoring</div></div>
+            </dl>
+          </div>
+          <div class="relative">
+            <div class="glass rounded-2xl p-6 shadow-2xl">
+              <div class="flex items-center gap-3 text-slate-200">
+                <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+                <span class="h-2 w-2 rounded-full bg-amber-400"></span>
+                <span class="h-2 w-2 rounded-full bg-red-400"></span>
+              </div>
+              <pre class="mt-4 text-slate-100 text-sm overflow-x-auto"><code>GET http://51.222.14.176:25576/download/youtube/video
+{
+  "creator": "Debraj",
+  "status": 200,
+  "success": true,
+  "result": {
+    "title": "Sample Video",
+    "url": "https://..."
+  }
+}</code></pre>
+              <div class="mt-4 grid grid-cols-3 gap-3 text-xs text-slate-300">
+                <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2H6a2 2 0 0 0-2 2v7"/><path d="M22 13a10 10 0 1 1-10-10"/></svg>Fast</div>
+                <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 14a8 8 0 1 1-8-8"/><path d="M20 14a8 8 0 0 1-8 8"/></svg>Reliable</div>
+                <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10h18"/><path d="M12 4v16"/></svg>Scalable</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="endpoints" class="max-w-6xl mx-auto px-4 py-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">Endpoints</h2>
+      <div id="cards" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+
+    <section id="tester" class="max-w-6xl mx-auto px-4 py-16">
+      <div class="mb-6">
+        <h2 class="text-2xl md:text-3xl font-bold text-white">Live API Tester</h2>
+        <p class="text-slate-300 mt-1">Pick an endpoint, provide inputs, and see real JSON responses.</p>
+      </div>
+      <div class="grid md:grid-cols-5 gap-6">
+        <div class="md:col-span-2 space-y-3 glass rounded-2xl p-4">
+          <label class="block text-sm text-slate-300 mb-2">Endpoint</label>
+          <select id="endpoint" class="w-full bg-slate-900/60 border border-white/10 rounded-lg px-3 py-2 text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500"></select>
+          <div id="inputs" class="mt-4 space-y-3"></div>
+          <button id="run" class="mt-2 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white shadow shadow-blue-500/30">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3l14 9-14 9V3z"/></svg>
+            Test API
+          </button>
+          <div id="example" class="mt-4 text-xs text-slate-400 break-all"></div>
+        </div>
+        <div class="md:col-span-3 space-y-3">
+          <div class="glass rounded-2xl p-4 min-h-[220px]">
+            <p class="text-slate-300 text-sm mb-2">Response</p>
+            <pre id="response" class="text-xs md:text-sm text-slate-100 overflow-x-auto whitespace-pre-wrap"></pre>
+            <p id="hint" class="text-slate-500 text-sm"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-800/60">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-slate-400 flex items-center justify-between">
+      <span>Built for Debraj • Media Downloader API</span>
+      <a class="text-blue-400 hover:text-blue-300" href="/logs.html">Open Logs Page</a>
+    </div>
+  </footer>
+
+  <script>
+    const API_BASE = 'http://51.222.14.176:25576';
+
+    const endpoints = [
+      { label: 'YouTube Audio', path: '/download/youtube/audio', method: 'GET', params: ['url'] },
+      { label: 'YouTube Video', path: '/download/youtube/video', method: 'GET', params: ['url'] },
+      { label: 'YouTube Video FHD', path: '/download/youtube/videofhd', method: 'GET', params: ['url'] },
+      { label: 'YouTube Search', path: '/download/youtube/search', method: 'GET', params: ['query','media_type','max_results'] },
+      { label: 'Generic Platform', path: '/download/{platform}/{media_type}', method: 'GET', params: ['platform','media_type','url'] },
+      { label: 'Info File', path: '/download/infofile', method: 'POST', body: ['file_url'] },
+      { label: 'Health', path: '/health', method: 'GET' },
+    ];
+
+    const cards = [
+      { method: 'GET', path: '/download/youtube/audio', params: ['url'], example: `${API_BASE}/download/youtube/audio?url=https://youtu.be/VIDEO_ID` },
+      { method: 'GET', path: '/download/youtube/video', params: ['url'], example: `${API_BASE}/download/youtube/video?url=https://youtu.be/VIDEO_ID` },
+      { method: 'GET', path: '/download/youtube/videofhd', params: ['url'], example: `${API_BASE}/download/youtube/videofhd?url=https://youtu.be/VIDEO_ID` },
+      { method: 'GET', path: '/download/youtube/search', params: ['query', 'media_type', 'max_results'], example: `${API_BASE}/download/youtube/search?query=lofi&media_type=video&max_results=5` },
+      { method: 'GET', path: '/download/{platform}/{media_type}', description: 'platform: instagram/facebook/tiktok/spotify | media_type: video/audio', params: ['platform', 'media_type', 'url'], example: `${API_BASE}/download/instagram/video?url=https://instagram.com/p/POST_ID` },
+      { method: 'POST', path: '/download/infofile', params: ['file_url'], example: `curl -X POST ${API_BASE}/download/infofile -H 'Content-Type: application/json' -d '{"file_url":"https://.../file.info"}'` },
+      { method: 'GET', path: '/health', example: `${API_BASE}/health` },
+    ];
+
+    function badgeColor(method) {
+      if (method === 'POST') return 'bg-emerald-500/15 text-emerald-300 border-emerald-500/20';
+      return 'bg-blue-500/15 text-blue-300 border-blue-500/20';
+    }
+
+    function renderCards() {
+      const wrap = document.getElementById('cards');
+      wrap.innerHTML = cards.map(c => `
+        <div class="group relative">
+          <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/20 to-blue-600/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="relative glass rounded-2xl p-5 transition-all hover:border-blue-500/30">
+            <div class="flex items-center justify-between gap-3">
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium rounded-md border ${badgeColor(c.method)}">${c.method}</span>
+                <span class="text-slate-200 font-mono text-sm break-all">${c.path}</span>
+              </div>
+              <button class="copy px-2 py-1 rounded-md bg-slate-800/60 hover:bg-slate-800 border border-white/10 text-slate-300 hover:text-white text-xs">Copy</button>
+            </div>
+            ${c.description ? `<p class="mt-2 text-slate-400 text-sm">${c.description}</p>` : ''}
+            ${c.params?.length ? `<div class="mt-3 flex flex-wrap gap-2 text-xs">${c.params.map(p => `<span class=\"px-2 py-1 rounded-md bg-slate-800/70 border border-white/10 text-slate-300\">${p}</span>`).join('')}</div>` : ''}
+            ${c.example ? `<pre class="mt-4 p-3 rounded-lg bg-black/40 border border-white/10 text-xs text-slate-200 overflow-x-auto"><code>${c.example}</code></pre>` : ''}
+          </div>
+        </div>
+      `).join('');
+
+      // Attach copy buttons
+      Array.from(wrap.querySelectorAll('.group')).forEach((card, idx) => {
+        const btn = card.querySelector('.copy');
+        const example = cards[idx].example || '';
+        btn.addEventListener('click', async () => {
+          try { await navigator.clipboard.writeText(example); btn.textContent = 'Copied'; setTimeout(()=> btn.textContent = 'Copy', 1200); } catch {}
+        });
+      });
+    }
+
+    function buildUrl(sel, values) {
+      let path = sel.path;
+      if (path.includes('{platform}')) path = path.replace('{platform}', encodeURIComponent(values.platform || 'instagram'));
+      if (path.includes('{media_type}')) path = path.replace('{media_type}', encodeURIComponent(values.media_type || 'video'));
+      const u = new URL(API_BASE + path);
+      if (sel.label === 'YouTube Search') {
+        if (values.query) u.searchParams.set('query', values.query);
+        if (values.media_type) u.searchParams.set('media_type', values.media_type);
+        if (values.max_results) u.searchParams.set('max_results', values.max_results);
+      } else {
+        if (values.url) u.searchParams.set('url', values.url);
+      }
+      return u.toString();
+    }
+
+    function renderTester() {
+      const selEl = document.getElementById('endpoint');
+      const inputsEl = document.getElementById('inputs');
+      const runBtn = document.getElementById('run');
+      const exampleEl = document.getElementById('example');
+      const respEl = document.getElementById('response');
+      const hintEl = document.getElementById('hint');
+
+      let selected = endpoints[0];
+      let values = { url: '', query: '', media_type: '', max_results: 5, platform: '', file_url: '' };
+
+      selEl.innerHTML = endpoints.map(e => `<option value="${e.label}">${e.label} (${e.method})</option>`).join('');
+      selEl.addEventListener('change', () => {
+        selected = endpoints.find(e => e.label === selEl.value);
+        drawInputs();
+      });
+
+      function drawInputs() {
+        const fields = [];
+        if ((selected.params||[]).includes('platform') || selected.path.includes('{platform}')) fields.push({ key:'platform', ph:'platform (instagram/facebook/tiktok/spotify)' });
+        if ((selected.params||[]).includes('media_type') || selected.path.includes('{media_type}')) fields.push({ key:'media_type', ph:'media_type (video/audio)' });
+        if (selected.label.includes('YouTube') && selected.label !== 'YouTube Search' || selected.path.includes('{platform}')) fields.push({ key:'url', ph:'Media URL' });
+        if (selected.label === 'YouTube Search') {
+          fields.push({ key:'query', ph:'query' });
+          fields.push({ key:'media_type', ph:'media_type (video/audio)' });
+          fields.push({ key:'max_results', ph:'max_results', type:'number' });
+        }
+        if (selected.label === 'Info File') fields.push({ key:'file_url', ph:'file_url' });
+
+        inputsEl.innerHTML = fields.map(f => `<input ${f.type?`type=\"${f.type}\"`:''} data-key="${f.key}" placeholder="${f.ph}" class="w-full bg-slate-900/60 border border-white/10 rounded-lg px-3 py-2 text-slate-100 placeholder-slate-500" />`).join('');
+        inputsEl.querySelectorAll('input').forEach(inp => {
+          inp.addEventListener('input', () => { values[inp.dataset.key] = inp.value; updateExample(); });
+        });
+        updateExample();
+      }
+
+      async function runTest() {
+        respEl.textContent = 'Loading...';
+        hintEl.textContent = '';
+        try {
+          const url = buildUrl(selected, values);
+          const opts = { method: selected.method };
+          if (selected.method === 'POST' && selected.label === 'Info File') {
+            opts.headers = { 'Content-Type': 'application/json' };
+            opts.body = JSON.stringify({ file_url: values.file_url || values.url });
+          }
+          const res = await fetch(url, opts);
+          let data;
+          try { data = await res.json(); } catch { data = { message: 'Non-JSON response', status: res.status }; }
+          const shaped = { creator: 'Debraj', status: res.status, success: res.ok, result: data };
+          respEl.textContent = JSON.stringify(shaped, null, 2);
+        } catch (e) {
+          respEl.textContent = e.message;
+        }
+      }
+
+      function updateExample() {
+        const url = buildUrl(selected, values);
+        exampleEl.textContent = `Example: ${url}`;
+      }
+
+      runBtn.addEventListener('click', runTest);
+      drawInputs();
+    }
+
+    renderCards();
+    renderTester();
+  </script>
+</body>
+</html>
