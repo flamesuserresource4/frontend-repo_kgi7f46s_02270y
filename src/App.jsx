@@ -1,28 +1,30 @@
-import { useState } from 'react'
+import React from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import EndpointsGrid from './components/EndpointsGrid';
+import ApiTester from './components/ApiTester';
+import LogsPanel from './components/LogsPanel';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [view, setView] = React.useState('explorer');
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
-      </div>
+    <div className="min-h-screen bg-[#0F172A] text-slate-200">
+      <Navbar currentView={view} setView={setView} />
+      <main>
+        <Hero />
+        <EndpointsGrid />
+        <ApiTester />
+        <section id="logs">{view === 'logs' && <LogsPanel />}</section>
+        <footer className="border-t border-slate-800/60">
+          <div className="max-w-6xl mx-auto px-4 py-8 text-sm text-slate-400 flex items-center justify-between">
+            <span>Built for Debraj • Media Downloader API</span>
+            <a className="text-blue-400 hover:text-blue-300" href="/logs.html">Open Logs Page</a>
+          </div>
+        </footer>
+      </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
